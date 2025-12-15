@@ -1,12 +1,12 @@
 import type { NextConfig } from "next";
 
 const nextConfig: NextConfig = {
-  // Enable static export for optimal performance on Vercel
-  output: 'export',
+  // Remove static export for auth pages to work
+  // output: 'export',
   
   // Optimize images
   images: {
-    unoptimized: true, // Required for static export
+    unoptimized: true,
   },
   
   // Enable React strict mode for better development
