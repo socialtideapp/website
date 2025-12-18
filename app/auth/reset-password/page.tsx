@@ -1,6 +1,6 @@
 'use client'
 
-import { useState, Suspense } from 'react'
+import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 
@@ -11,6 +11,50 @@ function ResetPasswordContent() {
   const [confirmPassword, setConfirmPassword] = useState('')
   const [status, setStatus] = useState<'idle' | 'loading' | 'success' | 'error'>('idle')
   const [message, setMessage] = useState('')
+  const [sessionReady, setSessionReady] = useState(false)
+
+  // Exchange the token from URL for a session
+  useEffect(() => {
+    const exchangeToken = async () => {
+      if (!supabase) {
+        setStatus('error')
+        setMessage('Configuration error. Please contact support.')
+        return
+      }
+
+      // Get token from URL query parameter (from email link)
+      const token = searchParams.get('token')
+      const type = searchParams.get('type') || 'recovery'
+
+      if (token) {
+        try {
+          // Verify the recovery token and establish session
+          const { error } = await supabase.auth.verifyOtp({
+            token_hash: token,
+            type: 'recovery'
+          })
+
+          if (error) throw error
+          
+          setSessionReady(true)
+        } catch (error: any) {
+          setStatus('error')
+          setMessage('Invalid or expired reset link. Please request a new one.')
+        }
+      } else {
+        // Check if there's already an active session
+        const { data: { session } } = await supabase.auth.getSession()
+        if (session) {
+          setSessionReady(true)
+        } else {
+          setStatus('error')
+          setMessage('Invalid reset link. Please click the link from your email.')
+        }
+      }
+    }
+
+    exchangeToken()
+  }, [searchParams])
 
   const handleResetPassword = async (e: React.FormEvent) => {
     e.preventDefault()
@@ -53,6 +97,18 @@ function ResetPasswordContent() {
       setStatus('error')
       setMessage(error.message || 'Failed to reset password')
     }
+  }
+
+  // Show loading while exchanging token
+  if (!sessionReady && status !== 'error') {
+    return (
+      <div className="min-h-screen bg-gradient-to-b from-ocean-light via-tide-blue to-ocean-deep overflow-x-hidden flex items-center justify-center px-6">
+        <div className="text-center">
+          <div className="w-16 h-16 mx-auto mb-6 border-4 border-white/30 border-t-white rounded-full animate-spin"></div>
+          <p className="text-white text-lg">Verifying reset link...</p>
+        </div>
+      </div>
+    )
   }
 
   return (
