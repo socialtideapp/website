@@ -87,11 +87,24 @@ function ResetPasswordContent() {
       if (error) throw error
 
       setStatus('success')
-      setMessage('Password updated successfully! Redirecting to app...')
+      setMessage('Password updated successfully! Redirecting...')
       
-      // Redirect to app after 2 seconds
+      // Redirect after 2 seconds
       setTimeout(() => {
-        window.location.href = 'socialtide://password-reset-success'
+        // Detect if on mobile device
+        const isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent)
+        
+        if (isMobile) {
+          // Try to open the app, fallback to website if app not installed
+          window.location.href = 'socialtide://password-reset-success'
+          // Fallback after 1 second if app doesn't open
+          setTimeout(() => {
+            window.location.href = 'https://www.socialtide.app'
+          }, 1000)
+        } else {
+          // Desktop: redirect to website
+          window.location.href = 'https://www.socialtide.app'
+        }
       }, 2000)
     } catch (error: any) {
       setStatus('error')
