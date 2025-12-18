@@ -15,18 +15,18 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Social Tide - Connect Through Questions",
+  title: "SocialTide - Connect Through Daily Questions",
   description: "Bringing people together, one question at a time. Create groups where someone is randomly selected to ask a question. Meaningful conversations that flow naturally. Coming soon to iOS and Android.",
-  keywords: ["social app", "questions", "connect", "groups", "mobile app", "iOS", "Android"],
-  authors: [{ name: "Social Tide" }],
+  keywords: ["socialtide", "social app", "questions", "connect", "groups", "mobile app", "iOS", "Android"],
+  authors: [{ name: "SocialTide" }],
   openGraph: {
-    title: "Social Tide - Connect Through Questions",
+    title: "SocialTide - Connect Through Daily Questions",
     description: "Bringing people together, one question at a time. Coming soon to iOS and Android.",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Social Tide - Connect Through Questions",
+    title: "SocialTide - Connect Through Daily Questions",
     description: "Bringing people together, one question at a time. Coming soon to iOS and Android.",
   },
 };
