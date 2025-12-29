@@ -1,4 +1,6 @@
 import { ImageResponse } from 'next/og'
+import { readFile } from 'fs/promises'
+import { join } from 'path'
 
 export const runtime = 'edge'
 export const alt = 'SocialTide - Connect Through Daily Questions'
@@ -9,11 +11,16 @@ export const size = {
 export const contentType = 'image/png'
 
 export default async function Image() {
+  // Load the logo
+  const logoData = await fetch(
+    new URL('/logo.png', 'https://www.socialtide.app')
+  ).then((res) => res.arrayBuffer())
+
   return new ImageResponse(
     (
       <div
         style={{
-          background: 'linear-gradient(135deg, #088395 0%, #05bfdb 40%, #0a4d68 100%)',
+          background: 'linear-gradient(135deg, #3FA9B5 0%, #9FD6C2 40%, #1F6F78 100%)',
           width: '100%',
           height: '100%',
           display: 'flex',
@@ -34,7 +41,7 @@ export default async function Image() {
             width: 400,
             height: 400,
             borderRadius: '50%',
-            background: 'rgba(5, 191, 219, 0.2)',
+            background: 'rgba(159, 214, 194, 0.2)',
           }}
         />
         <div
@@ -45,38 +52,22 @@ export default async function Image() {
             width: 500,
             height: 500,
             borderRadius: '50%',
-            background: 'rgba(10, 77, 104, 0.3)',
+            background: 'rgba(31, 111, 120, 0.3)',
           }}
         />
 
-        {/* Logo circle with sun gradient */}
-        <div
+        {/* Logo */}
+        <img
+          src={`data:image/png;base64,${Buffer.from(logoData).toString('base64')}`}
+          alt="SocialTide Logo"
+          width={140}
+          height={140}
           style={{
-            width: 140,
-            height: 140,
-            borderRadius: 70,
-            background: 'linear-gradient(135deg, #ffd93d 0%, #ff9a3d 100%)',
-            display: 'flex',
-            alignItems: 'center',
-            justifyContent: 'center',
+            borderRadius: 16,
             marginBottom: 32,
             boxShadow: '0 20px 40px rgba(0, 0, 0, 0.3)',
           }}
-        >
-          {/* People icon */}
-          <svg
-            width="80"
-            height="80"
-            viewBox="0 0 24 24"
-            fill="none"
-            stroke="white"
-            strokeWidth="1.5"
-            strokeLinecap="round"
-            strokeLinejoin="round"
-          >
-            <path d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z" />
-          </svg>
-        </div>
+        />
 
         {/* App name */}
         <div
@@ -96,7 +87,7 @@ export default async function Image() {
         <div
           style={{
             fontSize: 32,
-            color: '#e0f4f7',
+            color: '#E6F3F1',
             textAlign: 'center',
             maxWidth: 800,
             lineHeight: 1.4,
@@ -110,9 +101,9 @@ export default async function Image() {
           style={{
             marginTop: 40,
             padding: '12px 32px',
-            background: 'rgba(255, 255, 255, 0.15)',
+            background: 'rgba(127, 182, 133, 0.25)',
             borderRadius: 50,
-            border: '1px solid rgba(255, 255, 255, 0.25)',
+            border: '1px solid rgba(127, 182, 133, 0.4)',
             fontSize: 20,
             color: 'white',
             fontWeight: 500,
