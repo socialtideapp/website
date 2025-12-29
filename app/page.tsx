@@ -11,13 +11,6 @@ export default function Home() {
 
       {/* Hero Section */}
       <main id="main-content" className="relative" role="main">
-        {/* Animated waves background */}
-        <div className="absolute inset-0 overflow-hidden pointer-events-none">
-          <div className="wave wave-1"></div>
-          <div className="wave wave-2"></div>
-          <div className="wave wave-3"></div>
-        </div>
-
         {/* Content */}
         <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-32">
           {/* Header */}
@@ -38,7 +31,7 @@ export default function Home() {
           </header>
 
           {/* Main Feature */}
-          <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 mb-16 border border-white/20 shadow-2xl">
+          <div className="bg-deep-blue backdrop-blur-md rounded-3xl p-8 md:p-12 mb-16 border border-white/20 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
               Connection Made Simple
             </h2>
@@ -50,7 +43,7 @@ export default function Home() {
 
           {/* Features Grid */}
           <div className="grid md:grid-cols-3 gap-8 mb-20">
-            <article className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <article className="text-center p-6 bg-deep-blue backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-deep-blue/80 transition-all duration-300">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-tide-blue to-ocean-deep rounded-full flex items-center justify-center">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 4.354a4 4 0 110 5.292M15 21H3v-1a6 6 0 0112 0v1zm0 0h6v-1a6 6 0 00-9-5.197M13 7a4 4 0 11-8 0 4 4 0 018 0z" />
@@ -60,7 +53,7 @@ export default function Home() {
               <p className="text-ocean-foam">Connect with the people who matter most</p>
             </article>
 
-            <article className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <article className="text-center p-6 bg-deep-blue backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-deep-blue/80 transition-all duration-300">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-sun-orange to-sun-yellow rounded-full flex items-center justify-center">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -70,7 +63,7 @@ export default function Home() {
               <p className="text-ocean-foam">Someone new asks each time—no planning needed</p>
             </article>
 
-            <article className="text-center p-6 bg-white/5 backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-white/10 transition-all duration-300">
+            <article className="text-center p-6 bg-deep-blue backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-deep-blue/80 transition-all duration-300">
               <div className="w-16 h-16 mx-auto mb-4 bg-gradient-to-br from-ocean-light to-tide-blue rounded-full flex items-center justify-center">
                 <svg className="w-10 h-10 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />

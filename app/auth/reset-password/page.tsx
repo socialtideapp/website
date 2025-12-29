@@ -126,13 +126,6 @@ function ResetPasswordContent() {
 
   return (
     <div className="min-h-screen bg-gradient-to-b from-ocean-light via-tide-blue to-ocean-deep overflow-x-hidden flex items-center justify-center px-6">
-      {/* Animated waves background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="wave wave-1"></div>
-        <div className="wave wave-2"></div>
-        <div className="wave wave-3"></div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 w-full max-w-md">
         <div className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">

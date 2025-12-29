@@ -3,13 +3,6 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-ocean-light via-tide-blue to-ocean-deep overflow-x-hidden flex items-center justify-center px-6">
-      {/* Animated waves background */}
-      <div className="absolute inset-0 overflow-hidden pointer-events-none">
-        <div className="wave wave-1"></div>
-        <div className="wave wave-2"></div>
-        <div className="wave wave-3"></div>
-      </div>
-
       {/* Content */}
       <div className="relative z-10 text-center max-w-2xl">
         <div className="mb-8">
