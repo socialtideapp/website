@@ -33,11 +33,10 @@ export default function Home() {
           {/* Main Feature */}
           <div className="bg-deep-blue backdrop-blur-md rounded-3xl p-8 md:p-12 mb-16 border border-white/20 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-6 text-center">
-              Connection Made Simple
+              Connection, Made Simple
             </h2>
             <p className="text-lg md:text-xl text-ocean-foam text-center max-w-3xl mx-auto leading-relaxed">
-              Create groups with friends, family, or colleagues. Each day, someone is randomly selected to ask the group a question. 
-              No pressure, no planning—just meaningful conversations that flow naturally like the tide.
+              SocialTide helps you stay connected through simple, meaningful conversations. Create group chats with friends, family, or colleagues—and answer one shared daily question together.
             </p>
           </div>
 
@@ -59,8 +58,8 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8.228 9c.549-1.165 2.03-2 3.772-2 2.21 0 4 1.343 4 3 0 1.4-1.278 2.575-3.006 2.907-.542.104-.994.54-.994 1.093m0 3h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Random Questions</h3>
-              <p className="text-ocean-foam">Someone new asks each time—no planning needed</p>
+              <h3 className="text-xl font-semibold text-white mb-2">A New Voice Every Day</h3>
+              <p className="text-ocean-foam">Each day, a different person is chosen to ask the question. No planning, no pressure—just natural conversation that flows.</p>
             </article>
 
             <article className="text-center p-6 bg-deep-blue backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-deep-blue/80 transition-all duration-300">
@@ -69,13 +68,13 @@ export default function Home() {
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z" />
                 </svg>
               </div>
-              <h3 className="text-xl font-semibold text-white mb-2">Minimal Effort</h3>
-              <p className="text-ocean-foam">Stay connected without the overwhelm</p>
+              <h3 className="text-xl font-semibold text-white mb-2">Minimal Effort, Real Connection</h3>
+              <p className="text-ocean-foam">Stay in touch without the overwhelm. One question a day is all it takes to keep relationships active and meaningful.</p>
             </article>
           </div>
 
           {/* CTA Section */}
-          <div className="text-center bg-gradient-to-r from-sun-orange to-sun-yellow rounded-3xl p-12 shadow-2xl">
+          <div className="bg-deep-blue text-center backdrop-blur-md rounded-3xl p-8 md:p-12 mb-16 border border-white/20 shadow-2xl">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">
               Ready to Ride the Tide?
             </h2>
@@ -116,7 +115,7 @@ export default function Home() {
         {/* Footer */}
         <footer className="relative z-10 text-center py-12 text-ocean-foam border-t border-white/10" role="contentinfo">
           <small className="text-sm block">
-            © {new Date().getFullYear()} SocialTide. All rights reserved.
+            © 2025-2026 SocialTide. All rights reserved.
           </small>
           <p className="text-xs mt-2 text-ocean-foam/70">
             Available on mobile only • iOS and Android coming soon
