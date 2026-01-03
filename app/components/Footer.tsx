@@ -22,6 +22,12 @@ export default function Footer() {
         >
           Terms of Service
         </a>
+        <a 
+          href="/help" 
+          className="text-sm text-ocean-foam hover:text-white visited:text-ocean-foam transition-colors duration-300 underline"
+        >
+          Help
+        </a>
       </nav>
     </footer>
   );
