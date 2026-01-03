@@ -14,7 +14,7 @@ export default function Home() {
       {/* Hero Section */}
       <main id="main-content" className="relative" role="main">
         {/* Content */}
-        <div className="relative z-10 max-w-6xl mx-auto px-6 py-20 md:py-32">
+        <div className="relative z-10 max-w-6xl mx-auto px-6 py-10 md:py-16">
           {/* Header */}
           <header className="text-center mb-20">
             <div className="inline-block mb-6">

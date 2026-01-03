@@ -1,8 +1,10 @@
 export default function Footer() {
+  const currentYear = new Date().getFullYear();
+  
   return (
-    <footer className="text-center pt-12 pb-8 text-ocean-foam border-t border-white/20 mt-16" role="contentinfo">
+    <footer className="text-center pt-12 pb-8 text-ocean-foam border-t border-white/20 mt-8" role="contentinfo">
       <small className="text-sm block">
-        © 2025-2026 SocialTide. All rights reserved.
+        © {currentYear} SocialTide. All rights reserved.
       </small>
       <p className="text-xs mt-2 text-ocean-foam/70">
         Available on mobile only • iOS and Android coming soon
