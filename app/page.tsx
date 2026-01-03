@@ -1,3 +1,5 @@
+import Footer from './components/Footer';
+
 export default function Home() {
   return (
     <div className="min-h-screen bg-gradient-to-b from-ocean-light via-tide-blue to-ocean-deep overflow-x-hidden">
@@ -113,14 +115,9 @@ export default function Home() {
         </div>
 
         {/* Footer */}
-        <footer className="relative z-10 text-center py-12 text-ocean-foam border-t border-white/10" role="contentinfo">
-          <small className="text-sm block">
-            © 2025-2026 SocialTide. All rights reserved.
-          </small>
-          <p className="text-xs mt-2 text-ocean-foam/70">
-            Available on mobile only • iOS and Android coming soon
-          </p>
-        </footer>
+        <div className="relative z-10">
+          <Footer />
+        </div>
       </main>
     </div>
   );
