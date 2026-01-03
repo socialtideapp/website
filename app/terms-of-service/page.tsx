@@ -28,7 +28,7 @@ export default function TermsOfService() {
         {/* Content Container */}
         <article className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
           <header className="mb-12">
-            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">Terms of Service</h1>
+            <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">SocialTide - Terms of Service</h1>
             <p className="text-ocean-foam text-sm">Last updated: January 2, 2026</p>
           </header>
 
