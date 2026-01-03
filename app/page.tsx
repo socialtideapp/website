@@ -38,7 +38,10 @@ export default function Home() {
               Connection, Made Simple
             </h2>
             <p className="text-lg md:text-xl text-ocean-foam text-center max-w-3xl mx-auto leading-relaxed">
-              SocialTide helps you stay connected through simple, meaningful conversations. Create group chats with friends, family, or colleagues—and answer one shared daily question together.
+              SocialTide helps you stay connected through simple, meaningful conversations. 
+            </p>
+            <p className="text-lg md:text-xl text-ocean-foam text-center max-w-3xl mx-auto leading-relaxed">
+              Create group chats with friends, family, or colleagues—and answer one shared daily question together.
             </p>
           </div>
 
@@ -51,7 +54,7 @@ export default function Home() {
                 </svg>
               </div>
               <h3 className="text-xl font-semibold text-white mb-2">Create Groups</h3>
-              <p className="text-ocean-foam">Connect with the people who matter most</p>
+              <p className="text-ocean-foam">Connect with the people who matter most.</p>
             </article>
 
             <article className="text-center p-6 bg-deep-blue backdrop-blur-sm rounded-2xl border border-white/10 hover:bg-deep-blue/80 transition-all duration-300">
