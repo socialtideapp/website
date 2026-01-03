@@ -29,7 +29,7 @@ export default function PrivacyPolicy() {
         <article className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">SocialTide - Privacy Policy</h1>
-            <p className="text-ocean-foam text-sm">Last updated: January 2, 2026</p>
+            <p className="text-ocean-foam text-sm">Last updated: January 3, 2026</p>
           </header>
 
           <div className="prose prose-invert prose-lg max-w-none text-white/90 space-y-8">
@@ -153,13 +153,52 @@ export default function PrivacyPolicy() {
 
             <section>
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Data Retention</h2>
-              <p className="leading-relaxed mb-2">We retain data only as long as necessary to:</p>
+              <p className="leading-relaxed mb-4">
+                We collect and retain only the minimum personal data required to operate the service.
+              </p>
+              
+              <p className="leading-relaxed mb-2">This includes:</p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Operate the service</li>
-                <li>Meet legal requirements</li>
+                <li>Account information (such as email address and encrypted password)</li>
+                <li>Optional profile information you choose to provide (such as a bio, profile photo)</li>
+                <li>Conversations and messages created within the app</li>
               </ul>
-              <p className="leading-relaxed">
+
+              <p className="leading-relaxed mb-2">We retain personal data only for as long as necessary to:</p>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>Provide and maintain the service</li>
+                <li>Ensure platform safety and integrity</li>
+                <li>Meet legal, regulatory, or security requirements</li>
+              </ul>
+
+              <p className="leading-relaxed mb-4">
+                We do not sell personal data and do not retain personal data for advertising or profiling purposes.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-3 mt-6">Account Deletion</h3>
+              <p className="leading-relaxed mb-4">
                 You may request account deletion at any time.
+              </p>
+              <p className="leading-relaxed mb-2">When an account is deleted:</p>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>Your account information and profile data are permanently deleted</li>
+                <li>Your conversations are deleted or anonymized so they can no longer be linked to you</li>
+                <li>Any remaining data stored in system backups is securely removed within a limited retention period</li>
+              </ul>
+              <p className="leading-relaxed mb-4">
+                Deletion requests are processed without undue delay, typically within 30 days, unless retention is required by law.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-3 mt-6">Access to Your Data</h3>
+              <p className="leading-relaxed mb-4">
+                You may request access to, correction of, or a copy of your personal data at any time by contacting us. 
+                Where required by law, we will also support data portability requests.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-3 mt-6">Inactive Accounts</h3>
+              <p className="leading-relaxed">
+                Inactive accounts may be deleted after a prolonged period of inactivity. If this occurs, any associated 
+                personal data will be deleted or anonymized in accordance with this policy.
               </p>
             </section>
 
