@@ -4,8 +4,11 @@ export default function Footer() {
   return (
     <footer className="text-center pt-12 pb-8 text-ocean-foam border-t border-white/20 mt-8" role="contentinfo">
       <small className="text-sm block">
-        © {currentYear} SocialTide. All rights reserved.
+        © {currentYear} SocialTide Inc.
       </small>
+      <p className="text-xs mt-1 text-ocean-foam/70">
+        Ontario, Canada
+      </p>
       <p className="text-xs mt-2 text-ocean-foam/70">
         Available on mobile only • iOS and Android coming soon
       </p>
