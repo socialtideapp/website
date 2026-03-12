@@ -4,6 +4,14 @@ import { useState, useEffect, Suspense } from 'react'
 import { useRouter, useSearchParams } from 'next/navigation'
 import { supabase } from '@/lib/supabase'
 
+const PASSWORD_RULES = {
+  minLength: { label: 'At least 10 characters', test: (p: string) => p.length >= 10 },
+  hasUppercase: { label: 'One uppercase letter', test: (p: string) => /[A-Z]/.test(p) },
+  hasLowercase: { label: 'One lowercase letter', test: (p: string) => /[a-z]/.test(p) },
+  hasNumber: { label: 'One number', test: (p: string) => /[0-9]/.test(p) },
+  hasSpecialChar: { label: 'One special character', test: (p: string) => /[!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?]/.test(p) },
+}
+
 function ResetPasswordContent() {
   const router = useRouter()
   const searchParams = useSearchParams()
@@ -65,9 +73,10 @@ function ResetPasswordContent() {
       return
     }
 
-    if (password.length < 8) {
+    const failedRules = Object.values(PASSWORD_RULES).filter(rule => !rule.test(password))
+    if (failedRules.length > 0) {
       setStatus('error')
-      setMessage('Password must be at least 8 characters')
+      setMessage('Password does not meet all requirements')
       return
     }
 
@@ -170,10 +179,27 @@ function ResetPasswordContent() {
                     value={password}
                     onChange={(e) => setPassword(e.target.value)}
                     required
-                    minLength={8}
+                    minLength={10}
                     className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-ocean-foam/60 focus:outline-none focus:ring-2 focus:ring-sun-yellow"
                     placeholder="Enter new password"
                   />
+                  {password.length > 0 && (
+                    <ul className="mt-3 space-y-1">
+                      {Object.entries(PASSWORD_RULES).map(([key, rule]) => (
+                        <li key={key} className={`flex items-center gap-2 text-sm ${
+                          rule.test(password) ? 'text-sun-yellow' : 'text-ocean-foam/60'
+                        }`}>
+                          <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            {rule.test(password)
+                              ? <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={3} d="M5 13l4 4L19 7" />
+                              : <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
+                            }
+                          </svg>
+                          {rule.label}
+                        </li>
+                      ))}
+                    </ul>
+                  )}
                 </div>
 
                 <div>
@@ -186,7 +212,7 @@ function ResetPasswordContent() {
                     value={confirmPassword}
                     onChange={(e) => setConfirmPassword(e.target.value)}
                     required
-                    minLength={8}
+                    minLength={10}
                     className="w-full px-4 py-3 rounded-xl bg-white/20 border border-white/30 text-white placeholder-ocean-foam/60 focus:outline-none focus:ring-2 focus:ring-sun-yellow"
                     placeholder="Confirm new password"
                   />
