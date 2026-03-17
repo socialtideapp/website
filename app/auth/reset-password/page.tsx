@@ -187,7 +187,7 @@ function ResetPasswordContent() {
                     <ul className="mt-3 space-y-1">
                       {Object.entries(PASSWORD_RULES).map(([key, rule]) => (
                         <li key={key} className={`flex items-center gap-2 text-sm ${
-                          rule.test(password) ? 'text-sun-yellow' : 'text-ocean-foam/60'
+                          rule.test(password) ? 'text-sun-yellow' : 'text-white/80'
                         }`}>
                           <svg className="w-3.5 h-3.5 shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                             {rule.test(password)
