@@ -31,6 +31,12 @@ export default function Footer() {
         >
           Help
         </a>
+        <a 
+          href="/csae-policy" 
+          className="text-sm text-ocean-foam hover:text-white visited:text-ocean-foam transition-colors duration-300 underline"
+        >
+          Child Safety
+        </a>
       </nav>
     </footer>
   );
