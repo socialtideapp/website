@@ -144,13 +144,13 @@ export default function TermsOfService() {
                 <li>Coordinated campaigns intended to harm, silence, or remove another user from the platform</li>
               </ul>
 
-              <h3 className="text-xl font-semibold text-white mb-3">Enforcement</h3>
+              <h3 className="text-xl font-semibold text-white mb-3">Enforcement &amp; 24-Hour Removal Commitment</h3>
               <p className="leading-relaxed mb-4">
-                We take reports of objectionable content and abusive behavior seriously. When a violation is identified — whether through user reporting or our own moderation — we will take action promptly, up to and including:
+                We take reports of objectionable content and abusive behavior seriously. <strong className="text-white">We are committed to reviewing and acting on all reports of objectionable content or abusive users within 24 hours of a report being received.</strong> When a violation is identified — whether through user reporting or our own moderation — we will take action promptly, up to and including:
               </p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Immediate removal of the offending content</li>
-                <li>Temporary suspension of the account</li>
+                <li>Removal of the offending content within 24 hours of it being reported</li>
+                <li>Temporary suspension of the account pending investigation</li>
                 <li>Permanent termination of the account with no right to appeal in cases of severe or repeated violations</li>
                 <li>Reporting to law enforcement where required or appropriate</li>
               </ul>
