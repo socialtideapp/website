@@ -29,7 +29,7 @@ export default function TermsOfService() {
         <article className="bg-white/10 backdrop-blur-md rounded-3xl p-8 md:p-12 border border-white/20 shadow-2xl">
           <header className="mb-12">
             <h1 className="text-4xl md:text-5xl font-bold text-white mb-4">SocialTide - Terms of Service</h1>
-            <p className="text-ocean-foam text-sm">Last updated: January 2, 2026</p>
+            <p className="text-ocean-foam text-sm">Last updated: March 25, 2026</p>
           </header>
 
           <div className="prose prose-invert prose-lg max-w-none text-white/90 space-y-8">
@@ -102,14 +102,60 @@ export default function TermsOfService() {
               <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Acceptable Use</h2>
               <p className="leading-relaxed mb-2">You agree not to:</p>
               <ul className="list-disc pl-6 space-y-2 mb-4">
-                <li>Harass, abuse, or harm others</li>
-                <li>Post illegal, misleading, or explicit content</li>
-                <li>Impersonate others</li>
+                <li>Harass, bully, intimidate, abuse, or harm other users in any way</li>
+                <li>Post, share, or transmit illegal, misleading, explicit, hateful, violent, or otherwise objectionable content</li>
+                <li>Impersonate any person or entity</li>
                 <li>Attempt unauthorized access to accounts or systems</li>
-                <li>Use SocialTide for spam or automation</li>
+                <li>Use SocialTide for spam, automation, or any commercial solicitation without authorization</li>
+                <li>Engage in any conduct that restricts or inhibits any other user&apos;s use or enjoyment of the app</li>
               </ul>
               <p className="leading-relaxed">
-                Violations may result in content removal or account suspension/termination.
+                Violations may result in immediate content removal and/or permanent account suspension or termination.
+              </p>
+            </section>
+
+            <hr className="border-white/20" />
+
+            <section>
+              <h2 className="text-2xl md:text-3xl font-bold text-white mb-4">Zero Tolerance for Objectionable Content &amp; Abusive Behavior</h2>
+              <p className="leading-relaxed mb-4">
+                <strong className="text-white">SocialTide has a zero-tolerance policy for objectionable content and abusive users.</strong> This policy exists to protect all members of our community and is strictly enforced.
+              </p>
+
+              <h3 className="text-xl font-semibold text-white mb-3 mt-6">Objectionable Content</h3>
+              <p className="leading-relaxed mb-2">The following types of content are strictly prohibited and will not be tolerated under any circumstances:</p>
+              <ul className="list-disc pl-6 space-y-2 mb-6">
+                <li>Content that is sexually explicit, pornographic, or obscene</li>
+                <li>Content that is hateful, discriminatory, or promotes violence against any individual or group based on race, ethnicity, national origin, religion, gender, gender identity, sexual orientation, age, disability, or any other characteristic</li>
+                <li>Content that glorifies, encourages, or facilitates self-harm or suicide</li>
+                <li>Content that exploits, abuses, or endangers minors in any way</li>
+                <li>Content that is defamatory, threatening, or intended to harass or intimidate</li>
+                <li>Content that facilitates illegal activity</li>
+                <li>Graphic violence or content intended to shock or disturb</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-white mb-3">Abusive Behavior</h3>
+              <p className="leading-relaxed mb-2">The following behaviors toward other users are strictly prohibited:</p>
+              <ul className="list-disc pl-6 space-y-2 mb-6">
+                <li>Harassment, bullying, or sustained targeting of another user</li>
+                <li>Threatening or intimidating language directed at any person</li>
+                <li>Stalking or unwanted repeated contact after a user has indicated they do not want further communication</li>
+                <li>Doxxing — publishing private or identifying information about another person without their consent</li>
+                <li>Coordinated campaigns intended to harm, silence, or remove another user from the platform</li>
+              </ul>
+
+              <h3 className="text-xl font-semibold text-white mb-3">Enforcement</h3>
+              <p className="leading-relaxed mb-4">
+                We take reports of objectionable content and abusive behavior seriously. When a violation is identified — whether through user reporting or our own moderation — we will take action promptly, up to and including:
+              </p>
+              <ul className="list-disc pl-6 space-y-2 mb-4">
+                <li>Immediate removal of the offending content</li>
+                <li>Temporary suspension of the account</li>
+                <li>Permanent termination of the account with no right to appeal in cases of severe or repeated violations</li>
+                <li>Reporting to law enforcement where required or appropriate</li>
+              </ul>
+              <p className="leading-relaxed">
+                Users found to have posted objectionable content or engaged in abusive behavior will be removed from the platform. There are no second chances for the most serious violations.
               </p>
             </section>
 
