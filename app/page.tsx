@@ -84,14 +84,15 @@ export default function Home() {
               Ready to Ride the Tide?
             </h2>
             <p className="text-xl text-white/90 mb-8">
-              Coming soon to iOS and Android
+              Now available on iOS and Android
             </p>
             <div className="flex flex-col sm:flex-row gap-4 justify-center items-center" role="group" aria-label="App download options">
-              <button
-                type="button"
-                disabled
-                aria-label="Download on the App Store - Coming soon"
-                className="px-8 py-4 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 text-white font-semibold text-lg cursor-not-allowed opacity-80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sun-orange"
+              <a
+                href="https://apps.apple.com/app/id6756287364?utm_source=website&utm_medium=cta&utm_campaign=launch"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Download SocialTide on the App Store"
+                className="px-8 py-4 bg-gradient-to-r from-sun-orange to-sun-yellow rounded-2xl text-white font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sun-orange"
               >
                 <span className="flex items-center gap-2">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -99,12 +100,13 @@ export default function Home() {
                   </svg>
                   App Store
                 </span>
-              </button>
-              <button
-                type="button"
-                disabled
-                aria-label="Get it on Google Play - Coming soon"
-                className="px-8 py-4 bg-white/20 backdrop-blur-sm rounded-2xl border border-white/30 text-white font-semibold text-lg cursor-not-allowed opacity-80 focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sun-orange"
+              </a>
+              <a
+                href="https://play.google.com/store/apps/details?id=app.socialtide&utm_source=website&utm_medium=cta&utm_campaign=launch"
+                target="_blank"
+                rel="noopener noreferrer"
+                aria-label="Get SocialTide on Google Play"
+                className="px-8 py-4 bg-gradient-to-r from-sun-orange to-sun-yellow rounded-2xl text-white font-semibold text-lg hover:scale-105 transition-all duration-300 shadow-xl focus:outline-none focus:ring-2 focus:ring-white focus:ring-offset-2 focus:ring-offset-sun-orange"
               >
                 <span className="flex items-center gap-2">
                   <svg className="w-6 h-6" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
@@ -112,7 +114,7 @@ export default function Home() {
                   </svg>
                   Google Play
                 </span>
-              </button>
+              </a>
             </div>
           </div>
         </div>
